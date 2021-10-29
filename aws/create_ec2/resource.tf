@@ -2,7 +2,7 @@ resource "aws_instance" "first-server" {
   ami = "ami-0194c3e07668a7e36"
   instance_type = "t2.micro"
   key_name = aws_key_pair.id_rsa.key_name
-  vpc_security_group_ids = [aws_security_group.terraform-web-server.id]
+  vpc_security_group_ids = [aws_security_group.terraform-first-server.id]
 }
 
 resource "aws_key_pair" "id_rsa" {
